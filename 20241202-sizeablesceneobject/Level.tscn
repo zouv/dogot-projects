@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://ei307halshyv"]
+
+[ext_resource type="PackedScene" uid="uid://cueyffe67df34" path="res://Player.tscn" id="1_d1jf4"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_6wgjt"]
+size = Vector2(10, 10)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_5juvx"]
+data = PackedVector3Array(5, 0, 5, -5, 0, 5, 5, 0, -5, -5, 0, 5, -5, 0, -5, 5, 0, -5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_yr1l4"]
+
+[node name="Level" type="Node3D"]
+
+[node name="Panel" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_6wgjt")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Panel"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Panel/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_5juvx")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.740394, 0.672173, 0, -0.672173, 0.740394, -0.000661612, 2.62813, 2.58558)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.617667, 0.786439, 0, -0.786439, 0.617667, 0, 1.79817, 0)
+
+[node name="Box" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_yr1l4")
+
+[node name="Player" parent="." instance=ExtResource("1_d1jf4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2271, 1.73115)
