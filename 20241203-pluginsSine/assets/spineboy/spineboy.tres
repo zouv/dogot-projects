@@ -1,0 +1,13 @@
+[gd_resource type="SpineSkeletonDataResource" load_steps=4 format=3 uid="uid://cpyc5vvubm5si"]
+
+[ext_resource type="SpineAtlasResource" uid="uid://ddr1ujdeq6q53" path="res://assets/spineboy/spineboy.atlas" id="1_cy7ih"]
+[ext_resource type="SpineSkeletonFileResource" uid="uid://cav67eqh2ak30" path="res://assets/spineboy/spineboy-pro.skel" id="2_63bav"]
+
+[sub_resource type="SpineAnimationMix" id="SpineAnimationMix_ol3v5"]
+from = "idle"
+to = "aim"
+
+[resource]
+atlas_res = ExtResource("1_cy7ih")
+skeleton_file_res = ExtResource("2_63bav")
+animation_mixes = [SubResource("SpineAnimationMix_ol3v5")]

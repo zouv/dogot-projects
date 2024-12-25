@@ -1,5 +1,16 @@
-[gd_scene format=3 uid="uid://oepn1fpp0v22"]
+[gd_scene load_steps=3 format=3 uid="uid://oepn1fpp0v22"]
+
+[ext_resource type="SpineSkeletonDataResource" uid="uid://cpyc5vvubm5si" path="res://assets/spineboy/spineboy.tres" id="1_hrwcl"]
+[ext_resource type="Script" path="res://spine_sprite.gd" id="2_ms2vp"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="SpineSprite" type="SpineSprite" parent="."]
+position = Vector2(243, 427)
+scale = Vector2(0.5, 0.5)
+skeleton_data_res = ExtResource("1_hrwcl")
+preview_skin = "Default"
+preview_animation = "-- Empty --"
+preview_frame = false
+preview_time = 0.0
+script = ExtResource("2_ms2vp")
