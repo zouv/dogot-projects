@@ -1,0 +1,15 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+uid="uid://cnav8fod5125j"
+path="res://.godot/imported/92008_Q.atlas-f8cf1ed269ca3af21350d875fc27bfd0.spatlas"
+
+[deps]
+
+source_file="res://assets/92008_Q/92008_Q.atlas"
+dest_files=["res://.godot/imported/92008_Q.atlas-f8cf1ed269ca3af21350d875fc27bfd0.spatlas"]
+
+[params]
+
+normal_map_prefix="n"
